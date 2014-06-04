@@ -1,0 +1,10 @@
+language: c
+ 
+services: mongodb
+
+install:
+  - sudo apt-get install mono-devel mono-gmcs nunit-console
+  - mozroots --import --sync
+ 
+script:
+  - xbuild ./src/Skahal.Infrastructure.Repositories.sln  /p:"DefineConstants=TRAVIS_CI"  
