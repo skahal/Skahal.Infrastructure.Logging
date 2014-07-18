@@ -58,9 +58,7 @@ protected void Application_Start()
 {
     LogService.Debug("Application starting...");
     LogService.Debug("Machine: {0}", Environment.MachineName);
-
-    LogService.Debug("Bootstrap setup...");
-    new WebBootstrap().Setup();
+    LogService.Initialize(new Log4netLogStrategy("App"));
 
     LogService.Debug("Registering something...");
     // your app initilization code.
