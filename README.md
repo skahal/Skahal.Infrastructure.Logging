@@ -53,7 +53,7 @@ Add log4net configuration to app.config/web.config. A basic configuration looks 
 ```
 
 In your app initialization, like global.asax, add:
-```charp
+```csharp
 protected void Application_Start()
 {
     LogService.Debug("Application starting...");
