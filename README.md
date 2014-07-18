@@ -23,6 +23,53 @@ Setup
 
 PM> `Install-Package Skahal.Infrastructure.Logging.Log4net`
 
+Using Log4netLogStrategy
+===
+Add log4net configuration to app.config/web.config. A basic configuration looks like:
+```xml
+<configuration>
+  <configSections>
+     <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net" />
+```
+```xml
+ <log4net>
+    <appender name="RollingFileAppender" type="log4net.Appender.RollingFileAppender">
+      <file value="Logs/log.txt" />
+      <appendToFile value="true" />
+      <rollingStyle value="Size" />
+      <maxSizeRollBackups value="10" />
+      <maximumFileSize value="100KB" />
+      <staticLogFileName value="true" />
+      <ImmediateFlush value="true" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%d{dd/MM/yy HH:mm:ss} [%level%] %m%newline" />
+      </layout>
+    </appender>
+    <root>
+      <level value="ALL" />
+      <appender-ref ref="RollingFileAppender" />
+    </root>
+  </log4net>
+```
+
+In your app initialization, like global.asax, add:
+```charp
+protected void Application_Start()
+{
+    LogService.Debug("Application starting...");
+    LogService.Debug("Machine: {0}", Environment.MachineName);
+
+    LogService.Debug("Bootstrap setup...");
+    new WebBootstrap().Setup();
+
+    LogService.Debug("Registering something...");
+    // your app initilization code.
+}
+```
+
+---
+
+
 
 Roadmap
 ===
