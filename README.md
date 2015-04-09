@@ -80,7 +80,7 @@ Roadmap
 How to improve it?
 ======
 
-Create a fork of [Skahal.Infrastructure.Repositories](https://github.com/skahal/Skahal.Infrastructure.Logging/fork). 
+Create a fork of [Skahal.Infrastructure.Logging](https://github.com/skahal/Skahal.Infrastructure.Logging/fork). 
 
 Did you change it? [Submit a pull request](https://github.com/skahal/Skahal.Infrastructure.Logging/pull/new/master).
 
@@ -94,6 +94,7 @@ In others words, you can use this library for developement any kind of software:
 
 Change Log
 ======
+ - 1.0.1 HelperSharp updated.
  - 0.5.0 First version.
 
 
