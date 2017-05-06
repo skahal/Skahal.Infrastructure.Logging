@@ -1,8 +1,6 @@
 Skahal.Infrastructure.Logging
 ==================================
 
-[![Build Status](https://travis-ci.org/skahal/Skahal.Infrastructure.Logging.png?branch=master)](https://travis-ci.org/skahal/Skahal.Infrastructure.Logging)
-
 Skahal.Infrastructure.Framework.Logging.ILogStrategy's implementations.
 
 
